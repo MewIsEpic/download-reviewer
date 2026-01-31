@@ -20,13 +20,13 @@ I built this because my Downloads folder was constantly cluttered with temporary
 
 * **OS:** Windows 10/11 (Required for `pywin32` icon extraction)
 * **Language:** Python 3.10+
-* **Core Libraries:** `customtkinter`, `send2trash`, `opencv-python`, `PyMuPDF`
+* **Core Libraries:** `customtkinter`, `send2trash`, `opencv-python`, `PyMuPDF`, `Pillow`
 
 ## Installation
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/mewisepic/download-reviewer.git](https://github.com/mewisepic/download-reviewer.git)
+    git clone https://github.com/mewisepic/download-reviewer.git
     cd download-reviewer
     ```
 
@@ -47,6 +47,6 @@ Execute the application entry point:
 
 ```bash
 python main.py
+```
 
-![Uploading image.png…]()
 
