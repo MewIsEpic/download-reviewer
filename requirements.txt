@@ -1,0 +1,6 @@
+customtkinter>=5.2.0
+send2trash>=1.8.2
+Pillow>=10.0.0
+PyMuPDF>=1.23.0
+pywin32>=306
+opencv-python>=4.8.0
