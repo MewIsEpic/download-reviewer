@@ -11,6 +11,11 @@ I built this because my Downloads folder was constantly cluttered with temporary
 
 **Visuals:** Shows previews for images and PDFs so you know what you're deleting.
 
+##
+<img width="494" height="462" alt="image" src="https://github.com/user-attachments/assets/12a15c2c-8144-45f7-b115-34bf06c09d5d" />
+
+
+
 ## Technical Requirements
 
 * **OS:** Windows 10/11 (Required for `pywin32` icon extraction)
@@ -43,4 +48,5 @@ Execute the application entry point:
 ```bash
 python main.py
 
+![Uploading image.png…]()
 
