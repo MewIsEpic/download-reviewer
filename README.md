@@ -1,43 +1,43 @@
-Download Reviewer is a Python-based desktop utility I developed to improve the organization of the Downloads directory on Windows.
+# Download Reviewer
 
-I created this tool to address a recurring issue in my own workflow: temporary downloads accumulating over time, being forgotten, and often downloaded again unnecessarily. Manually sorting these files was inefficient, so I designed a lightweight solution to encourage regular and structured review.
+A simple Python utility to keep your Windows Downloads folder clean.
 
-Overview
+## Why I Built This
 
-The application presents files downloaded within the last 24 hours in a review queue, allowing quick decisions to Move, Keep, or Delete each file. This approach helps prevent long-term clutter while keeping the process simple and intentional.
+I built this because my Downloads folder was constantly cluttered with temporary files I'd forget to delete. Instead of manually sorting them, I wanted a quick way to review files from the last 24 hours and decide: Keep, Move, or Trash.
 
-Download Reviewer features a modern GUI built with CustomTkinter and integrates safely with the Windows filesystem, focusing on usability rather than complex automation.
+## Features
 
-## Key Features
-
-* **Automated Detection:** Scans and filters files created within the last 24-hour window.
-* **Safe Deletion:** Utilizes `send2trash` to move files to the Recycle Bin rather than permanently deleting them.
-* **Batch Workflow:** Processes files sequentially to ensure a clean directory state.
+- **Auto-Scan:** Finds files downloaded in the last 24 hours
+- **Safe Deletion:** Sends files to the Recycle Bin (no accidental data loss)
+- **Visual Previews:** Shows previews for images, PDFs, videos, and app icons so you know what you're deleting
+- **Navigation:** Navigate back and forth through files for flexible review
+- **File Organization:** Move files to organized folders with ease
 
 ## Technical Requirements
 
-* **OS:** Windows 10/11 (Required for `pywin32` icon extraction)
-* **Language:** Python 3.10+
-* **Core Libraries:** `customtkinter`, `send2trash`, `opencv-python`, `PyMuPDF`
+- **OS:** Windows 10/11 (Required for `pywin32` icon extraction)
+- **Language:** Python 3.10+
+- **Core Libraries:** `customtkinter`, `send2trash`, `opencv-python`, `PyMuPDF`, `Pillow`, `pywin32`
 
 ## Installation
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/mewisepic/download-reviewer.git](https://github.com/mewisepic/download-reviewer.git)
-    cd download-reviewer
-    ```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mewisepic/download-reviewer.git
+   cd download-reviewer
+   ```
 
-2.  **Set up the virtual environment**
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate
-    ```
+2. **Set up the virtual environment**
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
-3.  **Install dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
@@ -45,5 +45,37 @@ Execute the application entry point:
 
 ```bash
 python main.py
+```
 
+The application will scan your Downloads folder and display files from the last 24 hours one by one. You can:
+- **Delete:** Send file to Recycle Bin
+- **Keep:** Skip and move to next file
+- **Move:** Organize file into a folder
+- **Previous/Next:** Navigate through files
 
+## Project Structure
+
+```
+download-reviewer/
+├── main.py                    # Application entry point
+├── config.py                  # Configuration settings
+├── requirements.txt           # Python dependencies
+├── README.md                  # Project documentation
+├── .gitignore                 # Git ignore rules
+└── app/
+    ├── __init__.py
+    ├── file_manager.py        # File operations (scan, delete, move)
+    ├── preview_generator.py   # Preview generation for various file types
+    └── ui.py                  # User interface logic
+```
+
+## Configuration
+
+Edit `config.py` to customize:
+- `HOURS_THRESHOLD` - Hours to look back for recent files (default: 24)
+- `DOWNLOADS_PATH` - Path to Downloads folder (default: Windows Downloads)
+- `WINDOW_SIZE` - Application window size (default: "800x750")
+
+## License
+
+Feel free to use this tool for your own digital decluttering journey!
