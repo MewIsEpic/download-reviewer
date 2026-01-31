@@ -1,10 +1,10 @@
-**Download Reviewer**
+## Download Reviewer
 A simple Python utility to keep your Windows Downloads folder clean.
 
-**Why I Built This**
-I built this because my Downloads folder was constantly cluttered with temporary files I'd forget to delete. Instead of manually sorting them, I wanted a quick way to review files from the last 24 hours and decide: Keep, Move, or Trash.
+## Why I Built This
+I built this because my Downloads folder was constantly cluttered with temporary files I would forget to delete. Instead of manually sorting them, I wanted a quick way to review files from the last 24 hours and decide: Keep, Move, or Trash.
 
-**Features**
+## Features
 **Auto-Scan:** Finds files downloaded in the last 24 hours.
 
 **Safe Deletion:** Sends files to the Recycle Bin (no accidental data loss).
