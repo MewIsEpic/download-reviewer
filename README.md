@@ -7,7 +7,7 @@ I built this because my Downloads folder was constantly cluttered with temporary
 ## Features
 **Auto-Scan:** Finds files downloaded in the last 24 hours.
 
-**Safe Deletion:** Sends files to the Recycle Bin (no accidental data loss).
+**Safe Deletion:** Sends files to the Recycle Bin (no accidental data loss). test
 
 **Visuals:** Shows previews for images and PDFs so you know what you're deleting.
 
